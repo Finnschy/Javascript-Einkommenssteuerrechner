@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommenssteuerberechnungsmaschine</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <section>
+        <h1>Einkommenssteuerberechnungsmaschine</h1>
+        <div>
+            <form action="">
+                <label for="numInput">Einkommen</label>
+                <input type="number" name="numInput" id="numInput"/>
+                <br>
+                <label for="radio">Persönliche Verhältnnisse:</label>
+                <input type="radio" name="married" id="married"/>Verheiratet
+                
+                <input type="radio" name="single" id="single"/>Alleinstehend
+                <br>
+
+                <label for="jahre">Jahr</label>
+                <select name="jahre" id="jahre">
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+                <br>
+                <input type="submit" value="Rechne"/>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
