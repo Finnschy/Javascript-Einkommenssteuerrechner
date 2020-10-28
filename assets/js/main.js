@@ -1,14 +1,3 @@
-// 1. Fall: zvE <= 9.408 Euro -> ESt = 0
-// 2. Fall: 9.409 Euro <= zvE <= 14.532 Euro -> y = (zvE - 9408) / 10000
-                                                //    ESt = (972.87 * y + 1400) * y
-// 3. Fall: 14.533 Euro <= zvE <= 57.051 Euro -> z = (zvE - 14532) / 10000
-                                                //  ESt = (212.02 * z + 2397) * z + 972.79
-// 4. Fall: 57052 <= zvE <= 270500 -> ESt = 0.42 * zvE - 8963.74
-// 5. Fall: 270.501 <= zvE                     -> ESt = 0.45 * zvE - 17078.74
-
-// Für Personen, die zusammen gelegt werden: 2 * ESt
-
-
 function steuerRechner() {
 event.preventDefault()
 let zvE = parseInt(document.getElementById("numInput").value)
@@ -49,19 +38,19 @@ if ((single == true) && (zvE <= 9408) && (year == 2020)) {
     thirdCaseESt = ((212.02 * z + 2397) * z + 972.79) * 2 / 2
     output.innerHTML = thirdCaseESt.toFixed(2) + "€"
 
-} else if ((single == true) && (57052 <= zvE <= 270500) && (year == 2020)) {
+} else if ((single == true) && (57052 <= zvE <= 270500) && (year == 2020)) { // ab hier rechnet er nicht mehr richtig
     fourthCaseESt = (0.42 * zvE) - 8963.74
     output.innerHTML = fourthCaseESt.toFixed(2) + "€"
 
-} else if ((married == true) && (57052 <= zvE <= 270500) && (year == 2020)) {
+} else if ((married == true) && (57052 <= zvE <= 270500) && (year == 2020)) { // ab hier rechnet er nicht mehr richtig
     fourthCaseESt = ((0.42 * zvE) - 8963.74) * 2 / 2
     output.innerHTML = fourthCaseESt.toFixed(2) + "€"
 
-} else if ((single == true) && (270.501 <= zvE) && (year == 2020)) {
+} else if ((single == true) && (270.501 <= zvE) && (year == 2020)) { // ab hier rechnet er nicht mehr richtig
     fifthCaseESt = (0.45 * zvE) - 17078.74
     output.innerHTML = fifthCaseESt.toFixed(2) + "€"
 
-} else if ((married == true) && (270.501 <= zvE) && (year == 2020)) {
+} else if ((married == true) && (270.501 <= zvE) && (year == 2020)) { // ab hier rechnet er nicht mehr richtig
     fifthCaseESt = ((0.45 * zvE) - 17078.74) * 2 / 2
     output.innerHTML = fifthCaseESt.toFixed(2) + "€"
 
@@ -91,19 +80,19 @@ if ((single == true) && (zvE <= 9408) && (year == 2020)) {
     thirdCaseESt = ((216.16 * z + 2397) * z + 965.58) * 2 / 2
     output.innerHTML = thirdCaseESt.toFixed(2) + "€"
 
-} else if ((single == true) && (55961 <= zvE <= 265326) && (year == 2019)) {
+} else if ((single == true) && (55961 <= zvE <= 265326) && (year == 2019)) { // ab hier rechnet er nicht mehr richtig
     fourthCaseESt = (0.42 * zvE) - 8780.90
     output.innerHTML = fourthCaseESt.toFixed(2) + "€"
 
-} else if ((married == true) && (55961 <= zvE <= 265326) && (year == 2019)) {
+} else if ((married == true) && (55961 <= zvE <= 265326) && (year == 2019)) { // ab hier rechnet er nicht mehr richtig
     fourthCaseESt = ((0.42 * zvE) - 8780.90) * 2 / 2
     output.innerHTML = fourthCaseESt.toFixed(2) + "€"
 
-} else if ((single == true) && (265327 <= zvE) && (year == 2019)) {
+} else if ((single == true) && (265327 <= zvE) && (year == 2019)) { // ab hier rechnet er nicht mehr richtig
     fifthCaseESt = ((0.45 * zvE) - 16740.68)
     output.innerHTML = fifthCaseESt.toFixed(2) + "€"
 
-} else if ((married == true) && (265327 <= zvE) && (year == 2019) ) {
+} else if ((married == true) && (265327 <= zvE) && (year == 2019) ) { // ab hier rechnet er nicht mehr richtig
     fifthCaseESt = ((0.45 * zvE) - 16740.68) * 2 / 2
     output.innerHTML = fifthCaseESt.toFixed(2) + "€"
 
@@ -133,22 +122,23 @@ if ((single == true) && (zvE <= 9408) && (year == 2020)) {
     thirdCaseESt = ((220.13 * z + 2397) * z + 948.49) * 2 / 2
     output.innerHTML = thirdCaseESt.toFixed(2) + "€"
 
-} else if ((single == true) && (54950 <= zvE <= 260532) && (year == 2018)) {
+} else if ((single == true) && (54950 <= zvE <= 260532) && (year == 2018)) { // ab hier rechnet er nicht mehr richtig
     fourthCaseESt = (0.42 * zvE) - 8621.75
     output.innerHTML = fourthCaseESt.toFixed(2) + "€"
 
-} else if ((married == true) && (54950 <= zvE <= 260532) && (year == 2018)) {
+} else if ((married == true) && (54950 <= zvE <= 260532) && (year == 2018)) { // ab hier rechnet er nicht mehr richtig
     fourthCaseESt = ((0.42 * zvE) - 8621.75) * 2 / 2
     output.innerHTML = fourthCaseESt.toFixed(2) + "€"
 
-} else if ((single == true) && (260533 <= zvE) && (year == 2018)) {
+} else if ((single == true) && (260533 <= zvE) && (year == 2018)) { // ab hier rechnet er nicht mehr richtig
     fifthCaseESt = ((0.45 * zvE) - 16437.70)
     output.innerHTML = fifthCaseESt.toFixed(2) + "€"
 
-} else if ((married == true) && (260533 <= zvE) && (year == 2018) ) {
+} else if ((married == true) && (260533 <= zvE) && (year == 2018) ) { // ab hier rechnet er nicht mehr richtig
     fifthCaseESt = ((0.45 * zvE) - 16437.70) * 2 / 2
     output.innerHTML = fifthCaseESt.toFixed(2) + "€"
 
-}
+} 
+
 }
 
