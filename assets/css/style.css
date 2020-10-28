@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "vg5000";
+    src: url(../fonts/VG5000-Regular.otf);
+}
+
+:root {
+    --main-color: #a8a0e3;
+    --second-color: #726DAB;
+    --margin: 0 0 4% 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "vg5000";
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+
+body {
+    background: var(--main-color);
+    
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 1% 0 3% 0;
+   
+}
+
+.containerForm {
+    border-radius: 2rem;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5%;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    border-radius: 36px;
+    background: #a8a0e3;
+    box-shadow:  16px 16px 32px #8f88c1, 
+             -16px -16px 32px #c1b8ff;
+}
+
+input[type=number]{
+    margin: 0 0 0 5%;
+    padding: .5% 0 .5% 1%;
+    margin: var(--margin);
+    border: none;
+}
+
+label:nth-of-type(1) {
+    display: inline-block;
+    margin-right: 2%;
+}
+
+label:nth-of-type(2) , label:nth-of-type(5) {
+    display: inline-block;
+    margin: var(--margin);
+}
+
+.container {
+    position: relative;
+    padding: 0 2rem 0 1.5rem;
+    margin: 0 0 1rem 1rem;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+  /* Versteckt den Default Rdio Button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+  /* custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ffffff;
+}
+  
+  .container input:checked ~ .checkmark {
+    background-color: var(--second-color);
+}
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* der dot im radio button */
+  .container .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+}
+
+#jahre {
+    margin-left: 2%;
+    padding: .5%;
+    border: none;
+}
+
+input[type=submit] {
+    padding: 1% 4.5%;
+    margin: var(--margin);
+    background-color: #fff;
+    border: none;
+    transition: background-color .6s;
+    -webkit-transition: background-color .6s;
+    -moz-transition: background-color .6s;
+    -ms-transition: background-color .6s;
+    -o-transition: background-color .6s;
+}
+
+input[type=submit]:hover {
+    background-color: var(--second-color);
+    color: #fff;
+    
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-top: 5px solid var(--second-color);
+    padding: 2% 0;
+    
+}
+
+#output {
+    text-decoration: underline;
+}

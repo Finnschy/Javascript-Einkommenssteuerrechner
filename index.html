@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Einkommenssteuerberechnungsmaschine</title>
+    <title>Einkommensteuer-Berechnung </title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     
     <section>
-        <h1>Einkommenssteuerberechnungsmaschine</h1>
-        <div>
+        <h1>Einkommenssteuer-Berechnung </h1>
+        <div class="containerForm">
             <form action="">
-                <label for="numInput">Einkommen</label>
-                <input type="number" name="numInput" id="numInput"/>
-                <br>
+            
+                <label for="numInput">Einkommen:</label>
+                <input type="number" name="numInput" id="numInput"/> €
+                <!-- <br>
                 <label for="radio">Familienstand:</label>
-                <input type="radio" name="personalStatus" id="married"/>Verheiratet
                 
                 <input type="radio" name="personalStatus" id="single"/>Alleinstehend
+                
+                <input type="radio" name="personalStatus" id="married"/>Verheiratet -->
+                <br>
+                <label for="radio">Familienstand: </label>
+
+                <label class="container">Alleinstehend
+                    <input type="radio" checked="checked" name="radio" id="single">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Verheiratet
+                    <input type="radio" name="radio" id="married">
+                    <span class="checkmark"></span>
+                  </label>
                 <br>
 
-                <label for="jahre">Jahr</label>
+                <label for="jahre">Jahr: </label>
                 <select name="jahre" id="jahre">
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
                 </select>
                 <br>
-                <input type="submit" value="Rechne" onclick="test()"/>
+                <input type="submit" value="Berechne" onclick="steuerRechner()"/>
             </form>
 
             <h2>Einkommenssteuer: </h2>
