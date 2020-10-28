@@ -15,10 +15,10 @@
                 <label for="numInput">Einkommen</label>
                 <input type="number" name="numInput" id="numInput"/>
                 <br>
-                <label for="radio">Persönliche Verhältnnisse:</label>
-                <input type="radio" name="married" id="married"/>Verheiratet
+                <label for="radio">Familienstand:</label>
+                <input type="radio" name="personalStatus" id="married"/>Verheiratet
                 
-                <input type="radio" name="single" id="single"/>Alleinstehend
+                <input type="radio" name="personalStatus" id="single"/>Alleinstehend
                 <br>
 
                 <label for="jahre">Jahr</label>
@@ -28,8 +28,11 @@
                     <option value="2018">2018</option>
                 </select>
                 <br>
-                <input type="submit" value="Rechne"/>
+                <input type="submit" value="Rechne" onclick="test()"/>
             </form>
+
+            <h2>Einkommenssteuer: </h2>
+            <p id="output"></p>
         </div>
     </section>
 
